@@ -7,7 +7,7 @@ This is the start of GregEx, a React Native app that experiments with Regular Ex
 
 ## Background
 
-One day during lunch, one of our colleagues mistakenly refered to another colleague named "Greg" as "Green," and the nickname stuck eversince. Crazy, I know!
+One day during lunch, one of our colleagues mistakenly refered to another colleague named "Greg" as "Green," and the nickname stuck ever since. Crazy, I know!
 
 At the same, my goal for personal development was to improve my knowledge in Regular Expression and React Native, so I decided to combine both, which lead me to the development of GregEx.
 
