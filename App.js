@@ -7,7 +7,14 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {
+  Platform, 
+  StyleSheet, 
+  TextInput, 
+  Text, 
+  View,
+  TouchableOpacity
+} from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -16,17 +23,50 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      message: '',
+      placeHolder: '',
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.clearMessage = this.clearMessage.bind(this);
+  }
+
+  handleSubmit(inputValue) {
+    var regEx = /Greg|greg/g;
+    var translation = inputValue.replace(regEx, "Green");
+    this.setState({message:  `Hi ${translation}!`});
+    this.textInput.clear();
+  };
+
+  clearMessage() {
+    this.setState({message: ''})
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Text style={styles.header}>GregEx</Text>
+        <Text style={styles.subheader}>(Gregular Expression)</Text>
+        <TextInput 
+          style={styles.input}
+          placeholder="What's your name?"
+          ref={input =>  this.textInput = input}
+          onSubmitEditing={({nativeEvent}) => this.handleSubmit(nativeEvent.text)}
+          clearButtonMode='always'
+        />
+        <Text style={styles.message}>{this.state.message}</Text>
+        <TouchableOpacity 
+          style={styles.button}
+          onPress={this.clearMessage}
+        >
+          <Text style={{textAlign: 'center', fontSize: 20}}>Reset</Text>
+        </TouchableOpacity>
       </View>
     );
-  }
+  }  
 }
 
 const styles = StyleSheet.create({
