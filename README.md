@@ -13,12 +13,7 @@ At the same, my goal for personal development was to improve my knowledge in Reg
 
 The app takes a string, and if it matches "Greg," it will convert to "Green."
 
-<<<<<<< HEAD
 ![Image of Home Screen](https://github.com/dan11218/GregEx/blob/master/assets/home_screen_shot.png)
-=======
-![Image of Home Screen]
-(assets/home_screen_shot.png)
->>>>>>> c008e7814ea22f1b64eb9a6a96de3d44e9886955
 
 ### Technologies used:
 
