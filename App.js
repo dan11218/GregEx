@@ -71,19 +71,44 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 3,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#38e04b',
   },
-  welcome: {
-    fontSize: 20,
+  header: {
+    fontSize: 50,
+    fontWeight: '600',
     textAlign: 'center',
     margin: 10,
+    color: "white",
   },
-  instructions: {
+  subheader: {
+    fontSize: 20,
+    fontStyle: 'italic',
     textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    margin: 10,
+    color: "white",
+  },
+  input: {
+    height: 40,
+    width: 200,
+    backgroundColor: 'rgba(0, 0, 0, .05)',
+    textAlign: 'center',
+  },
+  message: {
+    fontSize: 20,
+    color: "white",
+    top: 30,
+  },
+  button: {
+    backgroundColor: "rgba(229, 229, 229, 0.5)",
+    borderRadius: 100,
+    padding: 5,
+    width: 90,
+    height: 90,
+    top: 240,
+    right: 110,
+    justifyContent: 'center',
   },
 });
